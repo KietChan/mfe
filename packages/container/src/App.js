@@ -1,10 +1,16 @@
 import React from 'react'
-import MarketingApp from "./components/MarketingApp";
+import {BrowserRouter} from 'react-router-dom'
+import MarketingApp from "./components/MarketingApp"
+import Headers from './components/Header'
+
 // .... test push event ....
 export default () => {
     return <div>
-        <h1>Hi There!</h1>
-        <hr/>
-        <MarketingApp/>
+        <BrowserRouter>
+            <div>
+                <Headers/>
+                <MarketingApp/>
+            </div>
+        </BrowserRouter>
     </div>
 }
